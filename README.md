@@ -1,4 +1,4 @@
-**Hevo Technical Assessment **
+**Hevo Technical Assessment**
 
 This repository contains the dbt project developed as part of the Hevo Technical Assessment.
 The objective is to build an end-to-end data pipeline: PostgreSQL (Docker-based) → Hevo (Logical Replication) → Snowflake → dbt analytics mart
@@ -60,7 +60,7 @@ hevo_dbt/
 4. Hevo Data Pipeline Setup
     Hevo Source Configuration
     Source: PostgreSQL (Docker-based)
-    Ingestion Mode: ✅ Logical Replication
+    Ingestion Mode:  Logical Replication
     Fill out the configuration Details and test the connection
     No credentials or connection details are stored in this repository.
 5. Hevo Destination Configuration
