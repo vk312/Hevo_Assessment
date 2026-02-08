@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: customers
+    description: "Customer 360 mart with LTV, order recency, frequency metrics"
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        tests:
+          - not_null
+      - name: last_name
+        tests:
+          - not_null
+      - name: first_order
+        description: "Customer's first order date"
+      - name: most_recent_order
+        description: "Customer's most recent order date"
+      - name: number_of_orders
+        description: "Total orders placed by customer"
+      - name: customer_lifetime_value
+        description: "Total payments made by customer"
+        tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "{{ column_name }} >= 0"
+

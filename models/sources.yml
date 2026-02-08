@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: src_public
+    database: HEVO_DB
+    schema: SRC_PUBLIC
+    tables:
+      - name: "raw_customers"
+      - name: "raw_orders"
+      - name: "raw_payments"
